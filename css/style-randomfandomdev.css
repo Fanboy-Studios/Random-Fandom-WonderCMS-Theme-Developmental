@@ -73,7 +73,6 @@ a:hover {
 	border-top: 4px solid #ffb600;
 	border-bottom: 4px solid #ffb600;
 	font-size: 105%;
-	// text-decoration: none;
 }
 /* The style of menu items as the mouse hovers over them */
 /* .navbar li a:hover { */
@@ -82,7 +81,6 @@ a:hover {
 	background: none !important;
 	border-top: 4px solid #ffffff;
 	border-bottom: 4px solid #ffffff;
-	// text-decoration: underline;
 }
 /* The style of menu items when the mouse is not hovered over them */
 /* .navbar li a:not(:hover) { */
