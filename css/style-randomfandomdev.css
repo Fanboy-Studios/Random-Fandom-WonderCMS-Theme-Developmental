@@ -42,7 +42,7 @@ a:hover {
 
 .navbar .container {
 	width: 100%;
-	margin-top: 4px;
+	margin-top: 0px;
 	margin-bottom: 0px;
 }
 .navbar .container .navbar-brand {
@@ -57,7 +57,7 @@ a:hover {
 }
 
 .navbar li {
-	font-size: 20px;
+	font-size: 16px;
 	font-family: "Product Sans", Google Sans, Poppins, Roboto, SF Pro Text, SF Pro Display, Verdana, Tahoma, Helvetica, Calibri, Arial;
 }
 .navbar, .navbar-collapse {
@@ -66,18 +66,18 @@ a:hover {
 }
 /* The style of the menu item for the current (active) page */
 .navbar-nav .nav-item.active a {
-	color: #fff !important;
+	color: #ffb600 !important;
 	background: none !important;
-	border-bottom: 1px solid #ccc;
+	border-bottom: 8px solid #ffb600;
 	font-size: 101%;
 	// text-decoration: none;
 }
 /* The style of menu items as the mouse hovers over them */
 /* .navbar li a:hover { */
 .navbar-nav .nav-item:not(.active) a:hover {
-	color: #fff !important;
+	color: #ffb600 !important;
 	background: none !important;
-	border-bottom: 1px solid #fff;
+	border-bottom: 4px solid #ffb600;
 	// text-decoration: underline;
 }
 /* The style of menu items when the mouse is not hovered over them */
