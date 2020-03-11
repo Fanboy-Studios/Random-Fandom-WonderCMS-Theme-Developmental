@@ -47,7 +47,7 @@ a:hover {
 }
 .navbar .container .navbar-brand {
 	color: #fff;
-	padding: 0px 0px 0px 12px; /* If using a title_logo.png */
+	padding: 0px 0px 0px 14px; /* If using a title_logo.png */
 	/* padding: 9px 0px 0px 5px; /* If not using a title_logo.png */
 	font-size: 50px;
 }
