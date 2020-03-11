@@ -5,10 +5,8 @@ The unstable, buggy, developmental version of Random Fandom WonderCMS Theme!
 Not Available Yet.
 
 # Download and Setup
-1. Download the ZIP file.
-2. Create folder named "randomfandomdev" in WonderCMS themes folder.
-3. Unzip all folders and files from zip file in to created folder.
-4. The theme will be visible in theme list of WonderCMS settings.
+1. Add "https://github.com/Fanboy-Studios/Random-Fandom-WonderCMS-Theme-Developmental" to your themes.
+2.
 
 # Features
 1. A "title logo" can be used in place of simple text, by placing a
