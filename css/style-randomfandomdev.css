@@ -6,7 +6,7 @@ html {
 body {
 	background: url(../noise.png)  repeat top left;
 	font-family: "Product Sans", Google Sans, Poppins, Roboto, SF Pro Text, SF Pro Display, Verdana, Tahoma, Helvetica, Calibri, Arial;
-	color:#555;
+	color:#ffb600;
 	text-align:center;
 	margin-bottom: 40px;
 }
@@ -32,7 +32,7 @@ a:hover {
 }
 
 .btn-info {
-		border-color: #2d356d;
+		border-color: #000032;
 		background-color: #2bc;
 }
 
@@ -41,7 +41,7 @@ a:hover {
 }
 
 .navbar .container {
-	width: 99%;
+	width: 100%;
 	margin-top: 4px;
 	margin-bottom: 0px;
 	//padding: 0.6px 20px 0.6px 20px;
