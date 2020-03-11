@@ -4,7 +4,7 @@ html {
 }
 
 body {
-	background: url(../noise.png)  repeat top left;
+	background: url(../background.png)  repeat top left;
 	font-family: "Product Sans", Google Sans, Poppins, Roboto, SF Pro Text, SF Pro Display, Verdana, Tahoma, Helvetica, Calibri, Arial;
 	color:#ffb600;
 	text-align:center;
