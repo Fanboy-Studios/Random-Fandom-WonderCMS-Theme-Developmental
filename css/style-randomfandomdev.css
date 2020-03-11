@@ -12,13 +12,13 @@ body {
 }
 
 a {
-	color: #ffb600;
-	text-decoration: underline, bold;
+	color: #0064FF;
+	text-decoration: underline;
 }
 a:hover {
 	cursor: pointer;
 	color: #ffffff;
-	text-decoration: underline, bold;
+	text-decoration: underline;
 }
 
 .whiteFont {color: #ffb600;}
@@ -70,6 +70,7 @@ a:hover {
 .navbar-nav .nav-item.active a {
 	color: #ffb600 !important;
 	background: none !important;
+	border-top: 4px solid #ffb600;
 	border-bottom: 4px solid #ffb600;
 	font-size: 105%;
 	// text-decoration: none;
@@ -79,6 +80,7 @@ a:hover {
 .navbar-nav .nav-item:not(.active) a:hover {
 	color: #ffffff !important;
 	background: none !important;
+	border-top: 4px solid #ffffff;
 	border-bottom: 4px solid #ffffff;
 	// text-decoration: underline;
 }
