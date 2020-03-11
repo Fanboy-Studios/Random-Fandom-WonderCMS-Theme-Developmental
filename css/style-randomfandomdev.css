@@ -47,7 +47,7 @@ a:hover {
 }
 .navbar .container .navbar-brand {
 	color: #fff;
-	padding: 0px 0px 0px 9px; /* If using a title_logo.png */
+	padding: 0px 0px 0px 12px; /* If using a title_logo.png */
 	/* padding: 9px 0px 0px 5px; /* If not using a title_logo.png */
 	font-size: 50px;
 }
@@ -68,8 +68,8 @@ a:hover {
 .navbar-nav .nav-item.active a {
 	color: #ffb600 !important;
 	background: none !important;
-	border-bottom: 8px solid #ffb600;
-	font-size: 101%;
+	border-bottom: 4px solid #ffb600;
+	font-size: 105%;
 	// text-decoration: none;
 }
 /* The style of menu items as the mouse hovers over them */
