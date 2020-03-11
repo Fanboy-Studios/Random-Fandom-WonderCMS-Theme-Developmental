@@ -47,7 +47,7 @@ a:hover {
 }
 .navbar .container .navbar-brand {
 	color: #fff;
-	padding: 0px 0px 0px 14px; /* If using a title_logo.png */
+	padding: 0px 0px 0px 16px; /* If using a title_logo.png */
 	/* padding: 9px 0px 0px 5px; /* If not using a title_logo.png */
 	font-size: 50px;
 }
@@ -83,7 +83,7 @@ a:hover {
 /* The style of menu items when the mouse is not hovered over them */
 /* .navbar li a:not(:hover) { */
 .navbar-nav .nav-item:not(.active) a:not(:hover) {
-	color: #ddd !important;
+	color: #ffb600 !important;
 }
 /* This chunk of CSS is intended to size and position nav-bar */
 /* icons that you may put into place */
