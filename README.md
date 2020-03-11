@@ -6,7 +6,9 @@ Not Available Yet.
 
 # Download and Setup
 1. Add "https://github.com/Fanboy-Studios/Random-Fandom-WonderCMS-Theme-Developmental" to your themes.
-2.
+2. Activate the theme.
+3. For updates, check the themes for updates, if there's any then you can apply them.
+4. You may have to clear your browser cache in order to see the changes.
 
 # Features
 1. A "title logo" can be used in place of simple text, by placing a
