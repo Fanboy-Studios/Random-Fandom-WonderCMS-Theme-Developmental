@@ -1,21 +1,19 @@
 <?php
 
-# Simply returns as associative array of Random Fandom theme options
-function getAdivvyoOpts() {
-  $adivvyoOpts = array(
+# Simply returns as associative array of randomfandomdev theme options
+function getRandomfandomdevOpts() {
+  $randomfandomdevOpts = array(
 		'theme:og:url' => "Site's og:url (needs full URL)",
 		'theme:og:image' => "Site's og:image (needs full URL)",
 		'theme:og:description' => "Site's og:description",
 		'theme:LinkedInURL' => "Site's LinkedIn URL",
 		);
-  return $adivvyoOpts;
+  return $randomfandomdevOpts;
 }
 
 # Our settings hook: $Wcms->addListener('settings', 'alterAdmin');
 # In here we give users an optional interface (versus config.txt)
-# where they can set the Adivvyo theme options.
-# Hat tip to Stephan Stanisic's theme-parallax for an example of
-# how to do this.
+# where they can set the Random Fandom Dev theme options.
 function alterAdmin($args) {
   global $Wcms;
   if(!$Wcms->get('config', 'loggedIn')) return $args;
@@ -23,14 +21,14 @@ function alterAdmin($args) {
   # Note that mb_convert_encoding() is used here because without it we
   # suffer the problem described by "hanhvansu at yahoo dot com", here:
   # https://www.php.net/manual/en/domdocument.loadhtml.php
-  # I suspect that theme-parallax suffers this problem, as well.
+  # It's suspected that theme-parallax suffers this problem, as well.
   @$doc->loadHTML(mb_convert_encoding($args[0], 'HTML-ENTITIES', "UTF-8"));
 
-  # Place a label identifying these are Adivvyo theme options
+  # Place a label identifying these are randomfandomdev theme options
   $themeLabel = $doc->createElement("p");
   $themeLabel->setAttribute("class", "subTitle");
   $themeLabel->setAttribute("style", "font-weight:bold; font-variant: normal;");
-  $themeLabel->nodeValue = "Adivvyo Theme Options";
+  $themeLabel->nodeValue = "Random Fandom Dev Theme Options";
   $doc->getElementById("general")->appendChild($themeLabel);
 
   # Setup style for id=themeInfoDiv
@@ -54,8 +52,8 @@ function alterAdmin($args) {
 	"Values set by it are shown below. Please make " .
 	"your changes there, or remove that file.</p>");
     $vals_html = "<p><ul>\n";
-    $adivvyoOpts = getAdivvyoOpts();
-    foreach ($adivvyoOpts as $id => $label) {
+    $randomfandomdevOpts = getRandomfandomdevOpts();
+    foreach ($randomfandomdevOpts as $id => $label) {
       $real_id = preg_replace('/^theme:/', '', $id);
       $vals_html .= "<li><b>$real_id</b> = " . acGet($real_id) . "\n";
     }
@@ -80,9 +78,9 @@ function alterAdmin($args) {
 	'<a href="https://css-tricks.com/essential-meta-tags-social-media">' .
 	'https://css-tricks.com/essential-meta-tags-social-media</a></p>');
 
-  # Loop over the getAdivvyoOpts() and made input fields for each one.
-  $adivvyoOpts = getAdivvyoOpts();
-  foreach ($adivvyoOpts as $id => $label) {
+  # Loop over the getRandomfandomdevOpts() and made input fields for each one.
+  $randomfandomdevOpts = getRandomfandomdevOpts();
+  foreach ($randomfandomdevOpts as $id => $label) {
     # Field label
     $real_id = preg_replace('/^theme:/', '', $id);
     $label_html =
@@ -117,13 +115,13 @@ function alterAdmin($args) {
 }
 
 # Hold the theme conf in a global so that we only load it once.
-global $AdivvyoConf;
-$AdivvyoConf = loadAdivvyoConf();
+global $RandomfandomdevConf;
+$RandomfandomdevConf = loadRandomfandomdevConf();
 
-# This function loads the global $AdivvyoConf, preferentially from
+# This function loads the global $RandomfandomdevConf, preferentially from
 # from config.txt if it exits, and if not, from wCMS settings that
 # the theme adds.
-function loadAdivvyoConf() {
+function loadRandomfandomdevConf() {
   global $Wcms;
   $conf = array( 'loaded' => true );
   $conf_file = $Wcms->rootDir .
@@ -132,8 +130,8 @@ function loadAdivvyoConf() {
   # If config.txt does not exist, load from wCMS settings
   if (! file_exists($conf_file)) {
     $conf['source'] = 'wCMS_settings';
-    $adivvyoOpts = getAdivvyoOpts();
-    foreach ($adivvyoOpts as $id => $label) {
+    $randomfandomdevOpts = getRandomfandomdevOpts();
+    foreach ($randomfandomdevOpts as $id => $label) {
       # We prepend
       $real_id = preg_replace('/^theme:/', '', $id);
       $conf[$real_id] = $Wcms->get('blocks', $id)->content;
@@ -155,20 +153,20 @@ function loadAdivvyoConf() {
   return $conf;
 }
 
-# Gets an $AdivvyoConf value or empty string if it does not exist
+# Gets an $randomfandomdevConf value or empty string if it does not exist
 function acGet($key) {
-  global $AdivvyoConf;
-  if (! (array_key_exists('loaded', $AdivvyoConf) and $AdivvyoConf['loaded'])) {
-    $AdivvyoConf = loadAdivvyoConf();
+  global $RandomfandomdevConf;
+  if (! (array_key_exists('loaded', $RandomfandomdevConf) and $RandomfandomdevConf['loaded'])) {
+    $RandomfandomdevConf = loadRandomfandomdevConf();
   }
-  if (array_key_exists($key, $AdivvyoConf)) {
-    return $AdivvyoConf[$key];
+  if (array_key_exists($key, $RandomfandomdevConf)) {
+    return $RandomfandomdevConf[$key];
   }
   return '';
 }
 
 # Returns the HTML for the footer's LinkedIn link.
-# Uses $AdivvyoConf settings from theme's config.txt
+# Uses $RandomfandomdevConf settings from theme's config.txt
 function getSiteLinkedInLink() {
   global $Wcms;
   $LI_URL = acGet('LinkedInURL');
@@ -184,9 +182,9 @@ function getSiteLinkedInLink() {
   return '';
 }
 
-# The $Wcms->menu() hook for the Adivvyo theme.
-# $Wcms->addListener('menu', 'getMenuAdivvyo');
-function getMenuAdivvyo($args) {
+# The $Wcms->menu() hook for the randomfandomdev theme.
+# $Wcms->addListener('menu', 'getMenuRandomfandomdev');
+function getMenuRandomfandomdev($args) {
   global $Wcms;
   $output = '';
   foreach ($Wcms->get('config', 'menuItems') as $item) {

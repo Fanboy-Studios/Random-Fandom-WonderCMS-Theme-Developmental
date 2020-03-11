@@ -3,11 +3,11 @@
 global $Wcms;
 if(defined('VERSION') && !defined('version'))
 	define('version', VERSION);
-if(version<'2.0.0')
+if(version<'0.0.9')
 	defined('INC_ROOT') OR die('Direct access is not allowed.');
 
-$theme_css = 'css/style-adivvyo.css';
-$Wcms->addListener('menu', 'getMenuAdivvyo'); // in functions.php
+$theme_css = 'css/style-randomfandomdev.css';
+$Wcms->addListener('menu', 'getMenuRandomfandomdev'); // in functions.php
 $Wcms->addListener('settings', 'alterAdmin'); // in functions.php
 ?>
 <html lang="en">

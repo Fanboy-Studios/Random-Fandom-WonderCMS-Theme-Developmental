@@ -33,3 +33,9 @@ Not Available Yet.
    existence of a config.txt will trump any values stored in Settings.
 5. Supports meta properties for og:xxx.
 6. Optional social media links/logos can be placed in the footer.
+
+# How to fix your site if it breaks due to your modifications to this theme. (At least most of the time.)
+0. YOU WILL LOSE SITE DATA, WHICH MAY INCLUDE YOUR POSTS, PICTURES, AND OTHER IMPORTANT FILES. MAKE A BACKUP!
+1. Delete the "cache.json" and "database.js" files from your WonderCMS "data" folder.
+2. Delete the folder for this theme in the WonderCMS "themes" folder. Don't delete the whole "themes" folder itself though.
+3. Refresh your webpage.
