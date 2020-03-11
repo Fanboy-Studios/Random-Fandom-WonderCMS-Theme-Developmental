@@ -13,12 +13,10 @@ body {
 
 a {
 	color: #0064FF;
-	text-decoration: underline;
 }
 a:hover {
 	cursor: pointer;
 	color: #ffffff;
-	text-decoration: underline;
 }
 
 .whiteFont {color: #ffb600;}
@@ -70,25 +68,20 @@ a:hover {
 .navbar-nav .nav-item.active a {
 	color: #ffb600 !important;
 	background: none !important;
-	border-top: 4px solid #ffb600;
 	border-bottom: 4px solid #ffb600;
 	font-size: 105%;
-	text-decoration: none;
 }
 /* The style of menu items as the mouse hovers over them */
 /* .navbar li a:hover { */
 .navbar-nav .nav-item:not(.active) a:hover {
 	color: #ffffff !important;
 	background: none !important;
-	border-top: 4px solid #ffffff;
 	border-bottom: 4px solid #ffffff;
-	text-decoration: none;
 }
 /* The style of menu items when the mouse is not hovered over them */
 /* .navbar li a:not(:hover) { */
 .navbar-nav .nav-item:not(.active) a:not(:hover) {
 	color: #ffb600 !important;
-	text-decoration: none;
 }
 /* This chunk of CSS is intended to size and position nav-bar */
 /* icons that you may put into place */
