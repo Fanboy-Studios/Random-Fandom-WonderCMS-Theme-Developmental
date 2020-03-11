@@ -12,11 +12,13 @@ body {
 }
 
 a {
-	color: #0532FF;
+	color: #ffb600;
+	text-decoration: underline, bold;
 }
 a:hover {
 	cursor: pointer;
 	color: #ffffff;
+	text-decoration: underline, bold;
 }
 
 .whiteFont {color: #ffb600;}
@@ -33,7 +35,7 @@ a:hover {
 
 .btn-info {
 		border-color: #ffb600;
-		background-color: #0532FF;
+		background-color: #000032;
 }
 
 .navbar-default .navbar-toggle {
