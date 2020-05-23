@@ -8,8 +8,9 @@ if(version<'0.0.9')
 
 $theme_css = 'css/style-randomfandomdev.css';
 $Wcms->addListener('menu', 'getMenuRandomfandomdev'); // in functions.php
-$Wcms->addListener('settings', 'alterAdmin'); // in functions.php
+/* $Wcms->addListener('settings', 'alterAdmin'); // in functions.php */
 ?>
+
 <html lang="en">
 <head>
 	<meta charset="UTF-8">

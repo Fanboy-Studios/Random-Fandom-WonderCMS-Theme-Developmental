@@ -11,6 +11,11 @@ function getRandomfandomdevOpts() {
   return $randomfandomdevOpts;
 }
 
+/*
+# This section is broken in WonderCMS update 3.1.0 due to detachment of the
+# WonderCMS Settings panel from requiring Bootstrap or jQuery,
+# and the rewritten CSS/JavaScript part of the settings.
+#
 # Our settings hook: $Wcms->addListener('settings', 'alterAdmin');
 # In here we give users an optional interface (versus config.txt)
 # where they can set the Random Fandom Dev theme options.
@@ -113,6 +118,7 @@ function alterAdmin($args) {
   $args[0] = preg_replace('~<(?:!DOCTYPE|/?(?:html|body))[^>]*>\s*~i', '', $doc->saveHTML());
   return $args;
 }
+  */
 
 # Hold the theme conf in a global so that we only load it once.
 global $RandomfandomdevConf;
