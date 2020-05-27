@@ -8,7 +8,7 @@ if(version<'0.0.9')
 
 $theme_css = 'css/style-randomfandomdev.css';
 $Wcms->addListener('menu', 'getMenuRandomfandomdev'); // in functions.php
-/* $Wcms->addListener('settings', 'alterAdmin'); // in functions.php */
+$Wcms->addListener('settings', 'alterAdmin'); // in functions.php Was previously broken in 3.1.0 due to broken functions.php file.
 ?>
 
 <html lang="en">

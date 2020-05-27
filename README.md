@@ -45,5 +45,6 @@ Not Available Yet.
 1. Go to your "data" folder.
 2. Open "database.js" for editing.
 3. Change the theme (probably on line 4) to "default"
-4. Save "database.js" and refresh your website page. You should be able to login and update the theme for my patches.
+4. Save "database.js" and refresh your website page. You should be able to login and update the theme for my patches (if they're available).
+   Please note that my theme is a fork of the Adivvyo theme, but heavily moddified. This means patches for broken updates may take longer to push.
 5. You may then reapply the theme.

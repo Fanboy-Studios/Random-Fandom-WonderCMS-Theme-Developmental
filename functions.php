@@ -11,10 +11,12 @@ function getRandomfandomdevOpts() {
   return $randomfandomdevOpts;
 }
 
-/*
-# This section is broken in WonderCMS update 3.1.0 due to detachment of the
+
+# This section was previously broken in WonderCMS update 3.1.0 due to detachment of the
 # WonderCMS Settings panel from requiring Bootstrap or jQuery,
 # and the rewritten CSS/JavaScript part of the settings.
+# This is has been patched by changing getElementById("general") to getElementById("menu")
+# in certain lines.
 #
 # Our settings hook: $Wcms->addListener('settings', 'alterAdmin');
 # In here we give users an optional interface (versus config.txt)
@@ -34,7 +36,7 @@ function alterAdmin($args) {
   $themeLabel->setAttribute("class", "subTitle");
   $themeLabel->setAttribute("style", "font-weight:bold; font-variant: normal;");
   $themeLabel->nodeValue = "Random Fandom Dev Theme Options";
-  $doc->getElementById("general")->appendChild($themeLabel);
+  $doc->getElementById("menu")->appendChild($themeLabel);
 
   # Setup style for id=themeInfoDiv
   $infoDivStyle = $doc->createElement("style");
@@ -43,11 +45,11 @@ function alterAdmin($args) {
 	"#themeInfoDiv a { color: #5bc0de; }\n" .
 	"#themeInfoDiv p, ul, li { font-variant: normal; }\n" .
 	"";
-  $doc->getElementById("general")->appendChild($infoDivStyle);
+  $doc->getElementById("menu")->appendChild($infoDivStyle);
   # Create a div to provide some information to the user in.
   $infoDiv = $doc->createElement("div");
   $infoDiv->setAttribute("id", "themeInfoDiv");
-  $doc->getElementById("general")->appendChild($infoDiv);
+  $doc->getElementById("menu")->appendChild($infoDiv);
 
   # If config.txt is in place, just tell the user and bail.
   if (acGet('source') === 'config.txt') {
@@ -94,7 +96,7 @@ function alterAdmin($args) {
 	'<span style="font-size:0.8em; font-family: monospace;"> - <b>' .
 						$real_id. '</b></span>' .
 	'</p>';
-    appendHTML($doc->getElementById("general"), $label_html);
+    appendHTML($doc->getElementById("menu"), $label_html);
     # Field input-box
     $wrapper = $doc->createElement("div");
     $wrapper->setAttribute("class", "change");
@@ -111,14 +113,14 @@ function alterAdmin($args) {
     }
     $input->nodeValue = $value;
     $wrapper->appendChild($input);
-    $doc->getElementById("general")->appendChild($wrapper);
-    #$doc->getElementById("general")->insertBefore($wrapper, $doc->getElementById("general")->lastChild->nextSibling);
+    $doc->getElementById("menu")->appendChild($wrapper);
+    #$doc->getElementById("menu")->insertBefore($wrapper, $doc->getElementById("general")->lastChild->nextSibling);
   }
 
   $args[0] = preg_replace('~<(?:!DOCTYPE|/?(?:html|body))[^>]*>\s*~i', '', $doc->saveHTML());
   return $args;
 }
-  */
+
 
 # Hold the theme conf in a global so that we only load it once.
 global $RandomfandomdevConf;
