@@ -114,7 +114,7 @@ function alterAdmin($args) {
     $input->nodeValue = $value;
     $wrapper->appendChild($input);
     $doc->getElementById("menu")->appendChild($wrapper);
-    #$doc->getElementById("menu")->insertBefore($wrapper, $doc->getElementById("general")->lastChild->nextSibling);
+    #$doc->getElementById("menu")->insertBefore($wrapper, $doc->getElementById("menu")->lastChild->nextSibling);
   }
 
   $args[0] = preg_replace('~<(?:!DOCTYPE|/?(?:html|body))[^>]*>\s*~i', '', $doc->saveHTML());
